@@ -1,6 +1,7 @@
 var
     express = require("express"),
-    mongoose = require("mongoose");
+    mongoose = require("mongoose"),
+    bodyParser = require("body-parser");
 
 /**
  * DATABASE DEFINITIONS
@@ -23,19 +24,6 @@ var PlayerSchema = mongoose.Schema({
 
 var Player = mongoose.model("Player", PlayerSchema);
 
-/*
-var joao = new Player({name: "João", score: 300}).save();
-var jose = new Player({name: "José", score: 200}).save();
-
-var question1 = new Question({
-    text: "Quais são os sintomas de organizações imaturas?",
-    correct: "Pessoas mal treinadas e projetos mal definidos.",
-    incorrect: [
-        "Falta de eficiência de produção e desenvolvimento.",
-        "Pessoas mal educadas e falta de profisionalismo."
-    ]
-}).save();
-*/
 
 /**
  * ROUTES DEFINITION
@@ -43,18 +31,70 @@ var question1 = new Question({
 
 var app = express();
 
-app.get("/questions/:amount", (req, res, next) => {
+app.use(bodyParser.json());
+
+app.get("/questions/(:amount)?", (req, res, next) => {
     var amount = parseInt(req.params.amount) || 6;
 
     Question.find().limit(amount).exec((err, questions) => {
-        res.status(2).json(questions);
+        res.status(200).json(questions);
     });
+});
+
+app.post("/questions", (req, res, next) => {
+    var question = new Question(req.body);
+
+    question
+        .save()
+        .then((question) => {
+            res
+                .status(200)
+                .json(question);
+        }, () => {
+            res
+                .status(400)
+                .json({
+                    message: "Question not in the proper format."
+                });
+        })
 });
 
 app.get("/players", (req, res, next) => {
     Player.find((err, players) => {
         res.status(200).json(players);
     });
+});
+
+app.get("/player/:id", (req, res, next) => {
+    Player.findById(req.params.id, (err, player) => {
+        if (err) {
+            res
+                .status(404)
+                .json({message: "Player not found."});
+        } else {
+            res
+                .status(200)
+                .json(player);
+        }
+    });
+});
+
+app.post("/players", (req, res, next) => {
+    var player = new Player(req.body);
+
+    player
+        .save()
+        .then((player) => {
+            res
+                .status(200)
+                .json(player);
+        }, () => {
+            res
+                .status(400)
+                .json({
+                    message: "Player not in the proper format."
+                });
+        });
 });
 
 /**
