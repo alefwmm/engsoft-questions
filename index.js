@@ -1,7 +1,8 @@
 var
     express = require("express"),
     mongoose = require("mongoose"),
-    bodyParser = require("body-parser");
+    bodyParser = require("body-parser"),
+    session = require("session");
 
 /**
  * DATABASE DEFINITIONS
@@ -12,7 +13,9 @@ mongoose.connect("mongodb://localhost/engsoft");
 var QuestionSchema = mongoose.Schema({
     text: String,
     correct: String,
-    incorrect: [String]
+    incorrect: [String],
+    hints: [String],
+    points: Number
 });
 
 var Question = mongoose.model("Question", QuestionSchema);
@@ -32,6 +35,10 @@ var Player = mongoose.model("Player", PlayerSchema);
 var app = express();
 
 app.use(bodyParser.json());
+
+app.get("/auth", (req, res, next) => {
+
+});
 
 app.get("/questions/(:amount)?", (req, res, next) => {
     var amount = parseInt(req.params.amount) || 6;
