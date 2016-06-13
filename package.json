@@ -11,7 +11,8 @@
   "dependencies": {
     "body-parser": "^1.15.1",
     "express": "^4.13.4",
+    "express-session": "^1.13.0",
     "mongoose": "^4.4.13",
-    "session": "^0.1.0"
+    "mongoose-simple-random": "^0.3.3"
   }
 }

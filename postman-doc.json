@@ -1,261 +1,103 @@
 {
-	"id": "722172e4-b74c-69d0-6792-4091cadc8f0f",
-	"name": "engsoft-questions",
-	"description": "Tests the engsoft-questions package API.",
-	"order": [
-		"47433ea5-eb92-4a3d-2e54-6e91d0364232",
-		"aa10b9ca-5c42-5a22-6370-1a71f0a5ea4f",
-		"eef32c39-2309-288e-ebac-f9e7179dafa6",
-		"cd3f7671-3a9a-0428-b822-c29d1f93bc52",
-		"9737f7d4-1751-06cc-f08a-79d996e70e4b"
-	],
-	"folders": [],
-	"timestamp": 1463425534074,
-	"owner": "599082",
-	"remoteLink": "https://www.getpostman.com/collections/6f79d508f5fca5f81546",
-	"public": false,
-	"requests": [
+	"variables": [],
+	"info": {
+		"name": "engsoft-questions",
+		"_postman_id": "fe299363-21e3-3152-c65f-ab3ffdaa37c1",
+		"description": "Tests the engsoft-questions package API.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
 		{
-			"id": "47433ea5-eb92-4a3d-2e54-6e91d0364232",
-			"headers": "",
-			"url": "{{domain}}/players",
-			"pathVariables": {},
-			"preRequestScript": null,
-			"method": "GET",
-			"collectionId": "722172e4-b74c-69d0-6792-4091cadc8f0f",
-			"data": null,
-			"dataMode": "params",
-			"name": "{{domain}}/players",
-			"description": "Returns the players ranking.",
-			"descriptionFormat": "html",
-			"time": 1463425594673,
-			"version": 2,
-			"responses": [
-				{
-					"status": "",
-					"responseCode": {
-						"code": 200,
-						"name": "OK",
-						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
-					},
-					"time": 30,
-					"headers": [
-						{
-							"name": "Connection",
-							"key": "Connection",
-							"value": "keep-alive",
-							"description": "Options that are desired for the connection"
-						},
-						{
-							"name": "Content-Length",
-							"key": "Content-Length",
-							"value": "141",
-							"description": "The length of the response body in octets (8-bit bytes)"
-						},
-						{
-							"name": "Content-Type",
-							"key": "Content-Type",
-							"value": "application/json; charset=utf-8",
-							"description": "The mime type of this content"
-						},
-						{
-							"name": "Date",
-							"key": "Date",
-							"value": "Mon, 16 May 2016 19:06:37 GMT",
-							"description": "The date and time that the message was sent"
-						},
-						{
-							"name": "ETag",
-							"key": "ETag",
-							"value": "W/\"8d-KX8zhj8w9/xtzElPAqonUQ\"",
-							"description": "An identifier for a specific version of a resource, often a message digest"
-						},
-						{
-							"name": "X-Powered-By",
-							"key": "X-Powered-By",
-							"value": "Express",
-							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-						}
+			"name": "{{domain}}/init/",
+			"request": {
+				"url": {
+					"raw": "{{domain}}/init/:amount",
+					"auth": {},
+					"host": [
+						"{{domain}}"
 					],
-					"cookies": [],
-					"mime": "",
-					"text": "[{\"name\":\"João\",\"score\":300,\"_id\":\"571ec8d37e57150b23ff0cc6\",\"__v\":0},{\"name\":\"José\",\"score\":200,\"_id\":\"571ec8d37e57150b23ff0cc7\",\"__v\":0}]",
-					"language": "javascript",
-					"rawDataType": "text",
-					"previewType": "html",
-					"searchResultScrolledTo": -1,
-					"forceNoPretty": false,
-					"write": true,
-					"empty": false,
-					"failed": false,
-					"state": {
-						"size": "normal"
-					},
-					"id": "ac647f66-f757-5b51-8f90-d69366b16f0e",
-					"name": "players-example",
-					"request": {
-						"url": "{{domain}}/players",
-						"headers": [],
-						"data": null,
-						"method": "GET",
-						"dataMode": "params"
-					}
-				}
-			],
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {}
-		},
-		{
-			"id": "9737f7d4-1751-06cc-f08a-79d996e70e4b",
-			"headers": "",
-			"url": "{{domain}}/player/:id",
-			"preRequestScript": null,
-			"pathVariables": {
-				"id": "571ec8d37e57150b23ff0cc6"
-			},
-			"method": "GET",
-			"data": null,
-			"dataMode": "params",
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1463428527049,
-			"name": "{{domain}}/player/:id",
-			"description": "Gets a player from the given `id`.",
-			"collectionId": "722172e4-b74c-69d0-6792-4091cadc8f0f",
-			"responses": []
-		},
-		{
-			"id": "aa10b9ca-5c42-5a22-6370-1a71f0a5ea4f",
-			"headers": "",
-			"url": "{{domain}}/questions/:amount",
-			"preRequestScript": null,
-			"pathVariables": {
-				"amount": ""
-			},
-			"method": "GET",
-			"data": null,
-			"dataMode": "params",
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1463426420916,
-			"name": "{{domain}}/questions/:amount",
-			"description": "Gets the an `amount` of questions.",
-			"collectionId": "722172e4-b74c-69d0-6792-4091cadc8f0f",
-			"responses": [
-				{
-					"status": "",
-					"responseCode": {
-						"code": 200,
-						"name": "OK",
-						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
-					},
-					"time": 18,
-					"headers": [
-						{
-							"name": "Connection",
-							"key": "Connection",
-							"value": "keep-alive",
-							"description": "Options that are desired for the connection"
-						},
-						{
-							"name": "Content-Length",
-							"key": "Content-Length",
-							"value": "285",
-							"description": "The length of the response body in octets (8-bit bytes)"
-						},
-						{
-							"name": "Content-Type",
-							"key": "Content-Type",
-							"value": "application/json; charset=utf-8",
-							"description": "The mime type of this content"
-						},
-						{
-							"name": "Date",
-							"key": "Date",
-							"value": "Mon, 16 May 2016 19:14:57 GMT",
-							"description": "The date and time that the message was sent"
-						},
-						{
-							"name": "ETag",
-							"key": "ETag",
-							"value": "W/\"11d-aa49CkzuGuAlRpwgjTX66g\"",
-							"description": "An identifier for a specific version of a resource, often a message digest"
-						},
-						{
-							"name": "X-Powered-By",
-							"key": "X-Powered-By",
-							"value": "Express",
-							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-						}
+					"path": [
+						"init",
+						":amount"
 					],
-					"cookies": [],
-					"mime": "",
-					"text": "[{\"text\":\"Quais são os sintomas de organizações imaturas?\",\"correct\":\"Pessoas mal treinadas e projetos mal definidos.\",\"_id\":\"571ec8d37e57150b23ff0cc8\",\"__v\":0,\"incorrect\":[\"Falta de eficiência de produção e desenvolvimento.\",\"Pessoas mal educadas e falta de profisionalismo.\"]}]",
-					"language": "javascript",
-					"rawDataType": "text",
-					"previewType": "html",
-					"searchResultScrolledTo": -1,
-					"forceNoPretty": false,
-					"write": true,
-					"empty": false,
-					"failed": false,
-					"state": {
-						"size": "normal"
-					},
-					"id": "21257b1d-d441-c032-9b3e-4348e1430307",
-					"name": "questions-example",
-					"request": {
-						"url": "{{domain}}/questions/:amount",
-						"headers": [],
-						"data": null,
-						"method": "GET",
-						"dataMode": "params"
-					}
-				}
-			]
+					"variable": [
+						{
+							"value": "",
+							"id": "amount"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": "Inicia um novo jogo. Inicializa as perguntas e as dicas a serem feitas para o jogador."
+			},
+			"response": []
 		},
 		{
-			"id": "cd3f7671-3a9a-0428-b822-c29d1f93bc52",
-			"headers": "Content-Type: application/json\n",
-			"url": "{{domain}}/players",
-			"preRequestScript": null,
-			"pathVariables": {},
-			"method": "POST",
-			"data": [],
-			"dataMode": "raw",
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1463428155581,
+			"name": "{{domain}}/question",
+			"request": {
+				"url": "{{domain}}/question",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": "Retorna a próxima pergunta."
+			},
+			"response": []
+		},
+		{
+			"name": "{{domain}}/hint",
+			"request": {
+				"url": "{{domain}}/hint",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": "Retorna a dica da pergunta corrente."
+			},
+			"response": []
+		},
+		{
 			"name": "{{domain}}/players",
-			"description": "Saves a new player score.",
-			"collectionId": "722172e4-b74c-69d0-6792-4091cadc8f0f",
-			"responses": [],
-			"rawModeData": "{\n    \"name\": \"Name here\",\n    \"score\": 42\n}"
+			"request": {
+				"url": "{{domain}}/players",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": "Retorna a lista de jogadores e suas pontuações."
+			},
+			"response": []
 		},
 		{
-			"id": "eef32c39-2309-288e-ebac-f9e7179dafa6",
-			"headers": "Content-Type: application/json\n",
-			"url": "{{domain}}/questions",
-			"pathVariables": {},
-			"preRequestScript": null,
-			"method": "POST",
-			"collectionId": "722172e4-b74c-69d0-6792-4091cadc8f0f",
-			"data": [],
-			"dataMode": "raw",
-			"name": "{{domain}}/questions",
-			"description": "Sends new questions to the database. See `body` for an example.",
-			"descriptionFormat": "html",
-			"time": 1463426834399,
-			"version": 2,
-			"responses": [],
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"rawModeData": "{\n    \"text\": \"Question text here\",\n    \"correct\": \"Right answer here\",\n    \"incorrect\": [\n        \"Incorrect answer 1\",\n        \"Incorrect answer 2\"\n    ]\n}"
+			"name": "{{domain}}/players",
+			"request": {
+				"url": "{{domain}}/players",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Jogador aleatório\",\n    \"score\": 26\n}"
+				},
+				"description": "Salva um jogador e sua pontuação."
+			},
+			"response": []
 		}
 	]
 }
