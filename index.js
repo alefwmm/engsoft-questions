@@ -2,6 +2,7 @@ var
     express    = require("express"),
     bodyParser = require("body-parser"),
     session    = require("express-session"),
+    cors       = require("cors"),
     connection = require("./models.js").connection,
     Question   = require("./models.js").Question,
     Player     = require("./models.js").Player;
@@ -10,6 +11,9 @@ var
 
 // Intância da camada de comunicação
 var app = express();
+
+// Acesso aos pontos de comunicação de qualquer origem
+app.use(cors());
 
 // Camada intermediária responsável por decodificar o conteúdo das requisições
 app.use(bodyParser.json());

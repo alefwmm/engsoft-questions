@@ -1,5 +1,4 @@
 var
-    samples    = require("./sample-questions.json"),
     connection = require("./models.js").connection,
     Player     = require("./models.js").Player;
 

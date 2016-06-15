@@ -1,105 +1,105 @@
 [
     {
-        "text": "1",
-        "correct": "C",
+        "text": "Em relação aos fluxos de casos de uso, é correto afirmar que:",
+        "correct": "podem utilizar iteração e execução condicional",
         "incorrect": [
-            "I1",
-            "I2"
+            "a UML prescreve como deve ser estruturado e formatado o texto",
+            "descrevem a estrutura interna da informação especificada"
         ],
         "hints": [
-            "H1",
-            "H2"
+            "Os casos de uso identificam as interações individuais entre o sistema e seus usuários ou outros sistemas",
+            "Os casos de uso são documentados por um diagrama de casos de uso de alto nível."
         ],
         "points": 1
     },
     {
-        "text": "2",
-        "correct": "C",
+        "text": "Em relação ao diagrama de classes da UML, é correto afirmar que:",
+        "correct": "podemos especificar restrições para as generalizações",
         "incorrect": [
-            "I1",
-            "I2"
+            "a identidade de uma instância de associação é estabelecida por um atributo explícito",
+            "a identidade de uma instância de classe é estabelecida por um atributo explícito"
         ],
         "hints": [
-            "H1",
-            "H2"
+            "Ao invés de aprender as características detalhadas de cada entidade que nós experimentamos, colocamos essas entidades em classes mais gerais e aprendemos suas características.",
+            "A identidade de uma instância é característica da classe."
         ],
         "points": 1
     },
     {
-        "text": "3",
-        "correct": "C",
+        "text": "No modelo CMMI, a verificação da satisfação de uma meta de uma area de processo é feita:",
+        "correct": "aferindo-se a realização de um grupo de práticas",
         "incorrect": [
-            "I1",
-            "I2"
+            "diretamente, entrevistando a gerência executiva",
+            "verificando a existência de política escrita"
         ],
         "hints": [
-            "H1",
-            "H2"
+            "CMMI é uma abordagem integrada para a modelagem da maturidade e capacidade de processo na adoção de boas práticas de engenharia de software e no gerenciamento integrado de qualidade",
+            "A satisfação de metas está relacionada a diversas práticas"
         ],
         "points": 1
     },
     {
-        "text": "4",
-        "correct": "C",
+        "text": "Em relação aos requisitos não funcionais, a seguinte afirmação é errada",
+        "correct": "os processos com práticas ágeis recomendam a consideração dos requisitos não-funcionais somente após entregas iniciais do software funcionando",
         "incorrect": [
-            "I1",
-            "I2"
+            "os requisitos não funcionais podem especificar restrições ao desenho do produto de software",
+            "um requisito não funcional pode ser específico de um caso de uso"
         ],
         "hints": [
-            "H1",
-            "H2"
+            "um requisito não funcional de software é aquele que descreve não o que o sistema fará, mas como ele fará",
+            "requisitos não funcionais têm um papel de suma importância durante o desenvolvimento de um sistema, podendo ser usados como critérios de seleção na escolha de alternativas de projeto"
         ],
         "points": 1
     },
     {
-        "text": "5",
-        "correct": "C",
+        "text": "Em relação ao modelo CMMI, a seguinte afirmação é errada",
+        "correct": "a gestão de configuração é uma área mais básicas do que a monitoração e controle de projetos",
         "incorrect": [
-            "I1",
-            "I2"
+            " gestão de requisitos é uma área mais basica que o desenvolvimento de requisitos",
+            "o planejamento de projetos é uma área mais básica do que a definição dos processos da organização"
         ],
         "hints": [
-            "H1",
-            "H2"
+            "monitoração e controle de projetos têm grande importânci no modelo CMMI",
+            "o modelo CMMI é dividido em diferentes áreas"
         ],
         "points": 1
     },
     {
-        "text": "6",
-        "correct": "C",
+        "text": "Em relação a modelagem com caso de uso da UML a seguinte afirmação é ERRADA:",
+        "correct": "Um ator modela a função de uma pessoa da organização",
         "incorrect": [
-            "I1",
-            "I2"
+            "uma relação de inclusão entre os casos de uso tem analogia com o conceito de macro-expansão",
+            "uma associação entre ator e caso de uso modela a existência de comunicação"
         ],
         "hints": [
-            "H1",
-            "H2"
+            "Um caso de uso pode ser tomado como um cenário simples que descreve o que o usuário espera de um sistema",
+            "O ator corresponde à pessoa da organização"
         ],
         "points": 1
     },
     {
-        "text": "7",
-        "correct": "C",
+        "text": "Em relação à estimativa de tamanho de software no Praxis usando APF, a seguinte afirmativa é ERRADA:",
+        "correct": "Podemos contar o tamanho de cada um dos requisitos relacionados a usabilidade",
         "incorrect": [
-            "I1",
-            "I2"
+            "Podemos contar o tamanho de cada um dos requisitos relacionados a atualização de entidades",
+            "Qualquer Tipo de Ponto de Função - TPF - depende, para sua determinação, do NTED."
         ],
         "hints": [
-            "H1",
-            "H2"
+            "Análise de Pontos de Função (APF) é uma técnica para a medição de projetos de desenvolvimento de software, visando a estabelecer uma medida de tamanho, em Pontos de Função (PF), considerando a funcionalidade implementada, sob o ponto de vista do usuário.",
+            "TED = Tipo de Elemento de Dado"
         ],
         "points": 1
     },
     {
-        "text": "8",
-        "correct": "C",
+        "text": "Em relaçao as oficinas JAD de levantamento inicial de requisitos de software, a seguinte afirmaçao é errada:",
+        "correct": "discutem-se os processos de negócio",
         "incorrect": [
-            "I1",
-            "I2"
+            "discutem-se restrições de desenho",
+            "utilizam-se prototipos"
         ],
         "hints": [
-            "H1",
-            "H2"
+            "A técnica JAD permite que todos compartilhem a mesma visão do produto e tenham o mesmo sentimento de responsabilidade sobre o seu desenvolvimento e sucesso.",
+            "Essa metodologia tem sido usada não só na área de sistemas, mas por todos aqueles que trabalham com projetos ou desejam tomar decisões que afetam diversas áreas de uma organização simultaneamente."
         ],
         "points": 1
     }
