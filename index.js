@@ -20,9 +20,6 @@ app.use(bodyParser.json());
 
 // Camada responsável pela autenticação dos jogadores
 app.use(session({
-    cookie: {
-        maxAge: 60 * 60 * 5                 // 5 horas de duração
-    },
     rolling:           true,                // maxAge atualizado automaticamente
     secret:            "engsoft-questions", // Segredo
     saveUninitialized: false,               // Não gerar sessão automaticamente
@@ -30,7 +27,7 @@ app.use(session({
 }));
 
 /* ROTAS */
-
+function explode(s) {a = ""; while (s.length > 0) {a += s.substr(0, 45) + "\n"; s = s.substr(45); } return a}
 // Rota resposável por gerar uma sessão de jogo
 app.get("/init(/:amount)?", (req, res, next) => {
     var amount = parseInt(req.params.amount) || 6;
@@ -94,6 +91,8 @@ app.get("/question", (req, res, next) => {
 
         req.session.save();
 
+	question.text = explode(question.text);
+
         console.log("Enviando uma pergunta: " + question._id);
         console.log("\tRestantes: " + req.session.questions.length);
 
@@ -127,6 +126,8 @@ app.get("/hint", (req, res, next) => {
 
         req.session.save();
 
+	hint = explode(hint);
+
         console.log(
             "Enviando uma dica da pergunta: " + req.session.questions[0]._id);
         console.log("Restantes: " + req.session.questions[0].hints.length);
@@ -142,10 +143,8 @@ app.get("/hint", (req, res, next) => {
         console.error(message);
 
         res
-            .status(500)
-            .json({
-                message: message
-            });
+            .status(200)
+            .json(message);
 
         next();
     }
